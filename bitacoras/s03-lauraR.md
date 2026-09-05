@@ -58,3 +58,6 @@ Porque si se almacena solo como FK, implicaria que existe la posibilidad de que 
 
 La restriccion de que el dato ingresado debe ser mayor o igual a 0
 
+**USO DE IA**
+
+La ia se utilizo como apoyo para establecer el orden de desarrollo del entregable y aclarar algunos conceptos claves para el desarrollo de la parte teorica
