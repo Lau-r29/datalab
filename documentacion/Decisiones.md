@@ -6,5 +6,5 @@
 
 ### 2. Tabla Puente: uso_dataset
 * *Relación original:* Experimento (N) - Dataset (M).
-* *Decisión del nombre:* Se eligió uso_dataset ya que  refleja que un experimento consume o utiliza uno o varios datasets específicos.
+* *Decisión del nombre:* Se eligió experimento_dataset ya que  refleja que un experimento consume o utiliza uno o varios datasets específicos.
 * *Atributos:* id_experimento e id_dataset
