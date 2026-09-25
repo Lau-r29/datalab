@@ -1,19 +1,3 @@
-/*
-    DataLab — Datos semilla
-    Semana 6 — Bases de Datos
-    SGBD: SQL Server
-    Herramienta: SQL Server Management Studio (SSMS)
-
-    Propósito:
-    - Cargar datos de prueba para las 8 tablas de DataLab.
-    - Permitir practicar SELECT, DISTINCT, ORDER BY y TOP.
-    - Dejar datos suficientes para las consultas multitabla de semanas posteriores.
-
-    Supuesto:
-    La estructura de las tablas ya fue creada mediante el DDL de la Semana 5.
-    Se utilizan los nombres de tablas y columnas definidos para DataLab.
-*/
-
 USE datalab;
 GO
 
@@ -82,31 +66,31 @@ INSERT INTO dataset
 VALUES
     (
         'ventas_historicas',
-        'ERP',
+        'Interna',
         '2026-08-01',
         125000
     ),
     (
         'clientes_2026',
-        'CRM',
+        'Externa',
         '2026-08-15',
         48000
     ),
     (
         'transacciones_bancarias',
-        'Core Bancario',
+        'Externa',
         '2026-09-01',
         850000
     ),
     (
         'pacientes_historicos',
-        'Sistema Hospitalario',
+        'Externa',
         '2026-09-05',
         76000
     ),
     (
         'consumo_clientes',
-        'Data Warehouse',
+        'Externa',
         '2026-09-10',
         215000
     );
