@@ -41,3 +41,26 @@ Se aplico la politica CASCADE porque si se elimina un experimento el modelo alma
 
 9. "modelo"."id_modelo" ?<? "metrica"."id_modelo" 
 Se aplico la politica CASCADE porque si se elimina un modelo, la metrica que se creó exclusivamente para ese modelo debe de ser eliminada para no guardar informacion sin importancia 
+
+
+//Semana 7 //
+Fecha:
+[7 octubre 2026 ]
+
+Cambio realizado:
+[ Creacion de la condicion CHECK en la tabla experimento]
+
+Motivo:
+[Proteger la tabla de términos ambiguos ]
+
+Problema encontrado:
+[ Diferentes palabras utilizadas en estado para definir un mismo punto del ciclo de vida del esperimento como terminado y exitoso]
+
+Solución:
+[Estandarizar los 4 tipos de estado permitidos, de esta manera se encontrara de manera uniforme todos los datos ]
+
+Restricciones afectadas:
+[ Se agrego un CHECK CONSTRAINT llamado chk_estado_experimento]
+
+Impacto sobre datos existentes:
+[Previamente se verifico que datos no seguian el estandar y se modificaron para que se encontraran en los mismos terminos de la condicion que se intentaba aplicar. ]
