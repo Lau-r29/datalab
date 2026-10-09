@@ -551,11 +551,11 @@ nombre_proyecto
 ### Consulta SQL
 
 ```sql
--- Escriba aquí la consulta
-```
 SELECT nombre_proyecto
 FROM proyecto
 ORDER BY ASC;
+```
+
 
 ---
 
@@ -800,3 +800,133 @@ Consultas de negocio
 ```
 
 Cada semana agregaremos nuevas capacidades para responder preguntas más complejas sobre los mismos datos.
+
+// SEMANA 8 //
+
+# Actividad 17 — Nuevas preguntas de negocio
+
+Resuelve las siguientes preguntas utilizando SQL.
+
+## Pregunta de negocio 1
+
+**¿Cuántos datasets existen por fuente?**
+
+Requisito:
+
+```text
+
+SELECT fuente, count(*) as datasets_x_fuente
+FROM dataset
+group by fuente;
+
+```
+
+---
+
+## Pregunta de negocio 2
+
+**¿Cuántos experimentos se encuentran en cada estado?**
+
+Requisito:
+
+```text
+SELECT estado, count(*) as experimentos_x_estado
+FROM experimento
+group by estado;
+
+```
+
+---
+
+## Pregunta de negocio 3
+
+**¿Cuál es el promedio de cada tipo de métrica?**
+
+Requisito:
+
+```text
+SELECT nombre_metrica, avg(valor) as promedio
+FROM metrica
+group by nombre_metrica;
+
+```
+
+---
+
+## Pregunta de negocio 4
+
+**¿Qué tipos de métrica tienen un promedio superior a 0.8?**
+
+Requisito:
+
+```text
+GROUP BY + AVG + HAVING
+```
+SELECT nombre_metrica, avg(valor) as promedio
+FROM metrica
+group by nombre_metrica
+having avg(valor) > 0.8;
+---
+
+## Pregunta de negocio 5
+
+**¿Cuál es el dataset más reciente de cada fuente?**
+
+Resolver primero con los conceptos disponibles esta semana.
+
+Pista:
+
+```text
+filtro + ordenamiento
+
+SELECT  fuente, max(fecha_carga) as ultima_carga
+FROM dataset
+group by fuente;
+```
+
+Si consideran que la solución completa requiere conceptos todavía no estudiados, documenten la limitación y propongan una aproximación.
+
+---
+
+## Pregunta de negocio 6
+
+**¿Qué experimentos tienen estados considerados como exitosos o fallidos?**
+
+Requisito:
+
+```text
+IN
+```
+SELECT *
+from experimento
+where estado in ('exitoso', 'fallido');
+---
+
+## Pregunta de negocio 7
+
+**¿Qué datasets tienen información en el campo `notas`?**
+
+Requisito:
+
+```text
+IS NOT NULL
+```
+SELECT * 
+FROM dataset
+where notas is not null;
+---
+
+## Pregunta de negocio 8
+
+**¿Qué métricas tienen valores entre 0.70 y 0.90?**
+
+Requisito:
+
+```text
+BETWEEN
+```
+SELECT * 
+FROM metrica
+where valor between 0.70 and 0.80;
+
+---
